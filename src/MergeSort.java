@@ -25,8 +25,10 @@ public class MergeSort {
                 arr[k] = aux[j++];
             else if (j > right)
                 arr[k] = aux[i++];
-            else if (aux[i] <= aux[j]) arr[k] = aux[i++];
-            else arr[k] = aux[j++];
+            else if (aux[i] <= aux[j])
+                arr[k] = aux[i++];
+            else
+                arr[k] = aux[j++];
         }
     }
 }
