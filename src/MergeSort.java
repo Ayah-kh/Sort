@@ -10,6 +10,8 @@ public class MergeSort {
         int mid = left + (right - left) / 2;
         sort(arr, aux, left, mid);
         sort(arr, aux, mid + 1, right);
+        if (arr[mid + 1].compareTo(arr[mid]) >= 0)
+            return;
         merge(arr, aux, left, mid, right);
     }
 
@@ -26,9 +28,9 @@ public class MergeSort {
             else if (j > right)
                 arr[k] = aux[i++];
             else if (aux[i].compareTo(aux[j]) <= 0)
-            arr[k] = aux[i++];
+                arr[k] = aux[i++];
             else
-            arr[k] = aux[j++];
+                arr[k] = aux[j++];
         }
     }
 }
